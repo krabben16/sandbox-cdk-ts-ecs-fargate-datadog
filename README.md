@@ -12,7 +12,7 @@ yarn cdk synth
 yarn cdk deploy
 ```
 
-## fotrmat
+## format
 ```
 yarn lint:fix
 ```
