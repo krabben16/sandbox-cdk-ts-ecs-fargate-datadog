@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "lint": "prettier --check *.{js,ts}",
+    "lint:fix": "prettier --write *.{js,ts}"
   },
   "author": {
     "name": "Amazon Web Services",
@@ -16,7 +18,8 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/node": "^8.10.38",
-    "aws-cdk": "*"
+    "aws-cdk": "*",
+    "prettier": "2.7.1"
   },
   "dependencies": {
     "aws-cdk-lib": "^2.0.0",
