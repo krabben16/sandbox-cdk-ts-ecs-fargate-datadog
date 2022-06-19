@@ -80,7 +80,7 @@ const cluster = new ecs.Cluster(stack, 'Cluster', {
 })
 
 // Alb FargateService
-new ecsPatterns.ApplicationLoadBalancedFargateService(stack, 'FargateService', {
+new ecsPatterns.ApplicationLoadBalancedFargateService(stack, 'EcsAlbFargateService', {
   cluster,
   desiredCount: 1,
   taskDefinition: taskDef,
