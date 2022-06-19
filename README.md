@@ -1,1 +1,1 @@
-# sandbox-sdk-ts-ecs-fargate-datadog
+# sandbox-cdk-ts-ecs-fargate-datadog

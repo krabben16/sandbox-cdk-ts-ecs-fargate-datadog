@@ -1,7 +1,7 @@
 {
-  "name": "fargate-service-with-logging",
+  "name": "fargate-service-with-local-image",
   "version": "1.0.0",
-  "description": "Running a load balanced service on ECS",
+  "description": "Running a load balanced service on Fargate with an image loaded locally",
   "private": true,
   "scripts": {
     "build": "tsc",
