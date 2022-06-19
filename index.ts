@@ -22,12 +22,12 @@ const taskDef = new ecs.FargateTaskDefinition(stack, 'TaskDef', {
 
 // Cloudwatch Logs
 const webLogGroup = new logs.LogGroup(stack, 'WebLogGroup', {
-  logGroupName: '/ecs/demo-app/web',
+  logGroupName: '/cdk/ecs-alb-fargate-service-stack/web',
   retention: logs.RetentionDays.SIX_MONTHS,
   removalPolicy: cdk.RemovalPolicy.DESTROY,
 })
 const datadogLogGroup = new logs.LogGroup(stack, 'DatadogLogGroup', {
-  logGroupName: '/ecs/demo-app/datadog',
+  logGroupName: '/cdk/ecs-alb-fargate-service-stack/datadog',
   retention: logs.RetentionDays.SIX_MONTHS,
   removalPolicy: cdk.RemovalPolicy.DESTROY,
 })
