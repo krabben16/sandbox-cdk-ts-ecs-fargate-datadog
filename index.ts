@@ -53,7 +53,7 @@ const ddApiKey = ecs.Secret.fromSecretsManager(
   secretsmanager.Secret.fromSecretNameV2(
     stack,
     'DatadogApiKey',
-    'EcsAlbFargateServiceStackDDApiKey'
+    'EcsAlbFargateServiceDDApiKey'
   )
 )
 
