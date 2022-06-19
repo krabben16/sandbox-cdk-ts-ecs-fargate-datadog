@@ -11,7 +11,7 @@ const app = new cdk.App()
 const stack = new cdk.Stack(app, 'EcsAlbFargateServiceStack')
 
 // https://blue21neo.blogspot.com/2021/04/cdktypescriptvpc.html
-const vpc = new ec2.Vpc(stack, 'ecs-alb-fargate-service-stack-vpc', {
+const vpc = new ec2.Vpc(stack, 'ecs-alb-fargate-service-vpc', {
   cidr: process.env.CDK_VPC_CIDR,
 })
 
@@ -22,12 +22,12 @@ const taskDef = new ecs.FargateTaskDefinition(stack, 'TaskDef', {
 
 // Cloudwatch Logs
 const webLogGroup = new logs.LogGroup(stack, 'WebLogGroup', {
-  logGroupName: '/aws/cdk/ecs-alb-fargate-service-stack/web',
+  logGroupName: '/aws/cdk/ecs-alb-fargate-service/web',
   retention: logs.RetentionDays.SIX_MONTHS,
   removalPolicy: cdk.RemovalPolicy.DESTROY,
 })
 const datadogLogGroup = new logs.LogGroup(stack, 'DatadogLogGroup', {
-  logGroupName: '/aws/cdk/ecs-alb-fargate-service-stack/datadog',
+  logGroupName: '/aws/cdk/ecs-alb-fargate-service/datadog',
   retention: logs.RetentionDays.SIX_MONTHS,
   removalPolicy: cdk.RemovalPolicy.DESTROY,
 })
